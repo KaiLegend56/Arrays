@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main(){
+    int i,j,r,c,min,temp;
+    printf("enter row and column ");
+    scanf("%d %d",&r,&c);
+    int a[r][c];
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("enter element");
+        scanf("%d",&a[i][j]);
+        }
+    }
+        for(int k=0;k<c;k++)
+        {    for(i=0;i<c;i++)
+            for(j=0;j<c-1;j++)
+            {
+                if(a[i][j]>a[i][j+1])
+                {
+                    temp=a[i][j];
+                    a[i][j]=a[i][j+1];
+                    a[i][j+1]=temp;
+                }
+            }
+
+        }
+
+            for(i=0;i<r;i++)
+         {   for(j=0;j<c;j++)
+          printf(" %d",a[i][j]);
+            printf("\n");
+         }
+
+         
+        
+
+}
